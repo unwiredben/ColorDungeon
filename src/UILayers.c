@@ -426,8 +426,10 @@ Window * InitializeWindow(const char *name, bool animated)
 {
 	DEBUG_LOG("Creating window %s",name);
 	Window *window = window_create();
-	window_set_fullscreen(window, true); // Do I want full screen?
-	window_set_background_color(window, GColorBlack);
+#ifdef PBL_SDK_2
+    window_set_fullscreen(window, true); // Do I want full screen?
+#endif
+    window_set_background_color(window, GColorBlack);
 	DEBUG_LOG("Window %s created",name);
 	return window;		
 }
