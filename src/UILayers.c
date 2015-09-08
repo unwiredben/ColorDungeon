@@ -370,14 +370,14 @@ void UpdateHealthText(int current, int max)
 	static char maxHealthText[] = "0000"; // Needs to be static because it's used by the system later.
 
 #ifdef PBL_COLOR
-    // show health as red when below 25%
-    text_layer_set_text_color(
-        currentHealthLayer,
-        ((current * 4) <= max) ? GColorRed : GColorWhite);
+	// show health as red when below 25%
+	text_layer_set_text_color(
+		currentHealthLayer,
+		((current * 4) <= max) ? GColorRed : GColorWhite);
 #endif
 	IntToString(currentHealthText, 4, current);
-    text_layer_set_text(currentHealthLayer, currentHealthText);
-    
+	text_layer_set_text(currentHealthLayer, currentHealthText);
+
 	IntToString(maxHealthText, 4, max);
 	text_layer_set_text(maxHealthLayer, maxHealthText);
 }
