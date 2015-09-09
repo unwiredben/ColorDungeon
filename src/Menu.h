@@ -25,6 +25,7 @@ typedef struct
 } MenuDefinition;
 
 void SetCurrentMenu(MenuDefinition *menuDef);
+void SetMenuSelection(int newSelection);
 
 void SetMenuClickConfigProvider(Window *window);
 

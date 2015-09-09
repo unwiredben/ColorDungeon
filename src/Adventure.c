@@ -194,7 +194,7 @@ MenuDefinition newFloorMenuDef =
 {
 	.menuEntries = 
 	{
-		{"Ok", "Return to adventuring", PopMenu}
+		{"OK", "Return to adventuring", PopMenu}
 	},
 	.init = NewFloorMenuInit,
 	.appear = NewFloorMenuAppear,

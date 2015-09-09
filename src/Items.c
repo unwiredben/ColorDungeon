@@ -81,7 +81,7 @@ MenuDefinition itemGainMenuDef =
 {
 	.menuEntries = 
 	{
-		{"Ok", "Return to adventuring", PopMenu}
+		{"OK", "Return to adventuring", PopMenu}
 	},
 	.init = ItemGainMenuInit,
 	.appear = ItemGainMenuAppear,

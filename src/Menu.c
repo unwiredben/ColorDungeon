@@ -180,14 +180,19 @@ void IterateMenuEntries(int direction, int limit)
 		}
 	}
 
-	if(newSelection != currentMenuDef->currentSelection)
-	{
-		MenuEntry *entry = &currentMenuDef->menuEntries[newSelection];
-		SetMenuHighlight(currentMenuDef->currentSelection, false);
-		SetMenuHighlight(newSelection, true);
-		currentMenuDef->currentSelection = newSelection;
-		SetMenuDescription(entry->description);
-	}
+	SetMenuSelection(newSelection);
+}
+
+void SetMenuSelection(int newSelection)
+{
+    if(newSelection != currentMenuDef->currentSelection)
+    {
+        MenuEntry *entry = &currentMenuDef->menuEntries[newSelection];
+        SetMenuHighlight(currentMenuDef->currentSelection, false);
+        SetMenuHighlight(newSelection, true);
+        currentMenuDef->currentSelection = newSelection;
+        SetMenuDescription(entry->description);
+    }
 }
 
 void UpSingleClickHandler(ClickRecognizerRef recognizer, Window *window)
